@@ -3,6 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require("cors");
 const artistRouter = require('./routes/artist-route');
+const albumRouter = require('./routes/album-route');
+
 import { NextFunction } from "express";
 
 import { EndPoints } from "./constants/end-points";
@@ -13,6 +15,7 @@ app.use(cors());
 
 // routes
 app.use(`${EndPoints.ARTISTS}`, artistRouter);
+app.use(`${EndPoints.ALBUMS}`, albumRouter);
 
 app.all("*", (req: Request, res: Response, next: NextFunction) => {
     next(new Error(`route ${req.url} not found ${404}`)); 

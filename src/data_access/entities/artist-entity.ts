@@ -1,9 +1,10 @@
 import { Document } from "mongoose";
+import { IAlbum } from "./album-entity";
 
 export interface IArtist extends Document {
-    // id?: string;
     firstName: string;
     lastName: string;
     about: string;
     country: string;
+    albums: IAlbum[];
 }

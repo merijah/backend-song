@@ -18,6 +18,11 @@ const artistSchema = new Schema<IArtist>({
         type: String,
         // required: [true, "country name is mandatory field"],
     },
+    albums: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: "Album",
+        required: true
+    }
     },
     );
 
