@@ -1,5 +1,6 @@
 import mongoose, { Schema, model } from 'mongoose';
 import { IArtist } from '../entities/artist-entity';
+import { albumSchema } from './album-schema';
 
 const artistSchema = new Schema<IArtist>({
     firstName: {
@@ -18,12 +19,6 @@ const artistSchema = new Schema<IArtist>({
         type: String,
         // required: [true, "country name is mandatory field"],
     },
-    albums: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: "Album",
-        required: true
-    }
-    },
-    );
+    },);
 
 export const ArtistModel = mongoose.model('artists', artistSchema); 

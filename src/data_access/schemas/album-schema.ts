@@ -1,7 +1,7 @@
 import mongoose, { Schema, model } from 'mongoose';
 import { IAlbum } from '../entities/album-entity';
 
-const albumSchema = new Schema<IAlbum>({
+export const albumSchema = new Schema<IAlbum>({
     duration: {
         type: Number,
     },
@@ -11,7 +11,6 @@ const albumSchema = new Schema<IAlbum>({
     name: {
         type: String,
     }
-    },
-    );
+    });
 
 export const AlbumModel = mongoose.model('albums', albumSchema); 

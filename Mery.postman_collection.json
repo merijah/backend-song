@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Suse\",\r\n    \"lastName\": \"Legesse\",\r\n    \"country\": \"Ethiopia\",\r\n    \"about\": \"About mery\"\r\n}",
+							"raw": "{\r\n    \"firstName\": \"Suse...\",\r\n    \"lastName\": \"Legesse\",\r\n    \"country\": \"Ethiopia\",\r\n    \"about\": \"About adiction\",\r\n    \"albumId\": \"660d0df4296cfe5b912b9000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -88,13 +88,8 @@
 						"method": "PATCH",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Susegnaw\",\r\n        \"lastName\": \"Legesse\",\r\n        \"about\": \"About mery\",\r\n        \"country\": \"Ethiopia\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"mode": "formdata",
+							"formdata": []
 						},
 						"url": {
 							"raw": "http://localhost:{{PORT}}/api/v1/artists/660bdca0b5ccc8df12c7a031",
@@ -119,7 +114,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{PORT}}/api/v1/artists/660bdca0b5ccc8df12c7a031",
+							"raw": "http://localhost:{{PORT}}/api/v1/artists/660bdb3aa1315076b3ca2bcc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -129,7 +124,446 @@
 								"api",
 								"v1",
 								"artists",
-								"660bdca0b5ccc8df12c7a031"
+								"660bdb3aa1315076b3ca2bcc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Album",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"albumId\": \"660d0dfd296cfe5b912b9002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/artists/660be416bdee95ccde4693ae/albums",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"artists",
+								"660be416bdee95ccde4693ae",
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get albums by artist id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/artists/660be416bdee95ccde4693ae/albums",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"artists",
+								"660be416bdee95ccde4693ae",
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get songs by artist id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/artists/660be416bdee95ccde4693ae/song",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"artists",
+								"660be416bdee95ccde4693ae",
+								"song"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get songs by artist id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/artists/660be416bdee95ccde4693ae/songs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"artists",
+								"660be416bdee95ccde4693ae",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Album",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/albums",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration\": 70,\r\n    \"year\": 2014,\r\n    \"name\": \"Hi someboey\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/albums",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/albums/660d0dfd296cfe5b912b9002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"albums",
+								"660d0dfd296cfe5b912b9002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"year\": 2010\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/albums/660d0dc2296cfe5b912b8ffd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"albums",
+								"660d0dc2296cfe5b912b8ffd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/albums/660d0dc2296cfe5b912b8ffd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"albums",
+								"660d0dc2296cfe5b912b8ffd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Song",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Song-3\",\r\n    \"duration\": 5,\r\n    \"year\": 2014,\r\n    \"author\": \"Mery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/songs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/songs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Sng\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/songs/660e5502e91587ee51c7e67a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"songs",
+								"660e5502e91587ee51c7e67a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Sng\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/songs/660e5502e91587ee51c7e67a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"songs",
+								"660e5502e91587ee51c7e67a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Sng\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/songs/660e5502e91587ee51c7e67a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"songs",
+								"660e5502e91587ee51c7e67a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Song",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"songId\": \"660e54f6e91587ee51c7e678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/albums/660d0df4296cfe5b912b9000/songs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"albums",
+								"660d0df4296cfe5b912b9000",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Songs by Album Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{PORT}}/api/v1/artist/660e5502e91587ee51c7e67a/songs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"artist",
+								"660e5502e91587ee51c7e67a",
+								"songs"
 							]
 						}
 					},
