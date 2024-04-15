@@ -2,7 +2,7 @@ import { AlbumArtistModel } from "../data_access/schemas/album-artist-schema";
 import { AlbumModel } from "../data_access/schemas/album-schema";
 import { ArtistModel } from "../data_access/schemas/artist-schema";
 import { SongModel } from "../data_access/schemas/song-schema";
-
+import { ObjectId } from "mongoose";
 exports.getAllSongs = async (req: any, res: any,) => {
     const songs = await SongModel.find();
 
@@ -76,8 +76,7 @@ exports.deleteSong = async (req: any, res: any) => {
 
 exports.updateSong = async (req: any, res: any) => {
     const { id } = req.params;
-
-    const result = await SongModel.findByIdAndUpdate(id, req.body, { new: true});
+        const result = await SongModel.findOneAndUpdate({_id: id}, req.body, { new: true});
 
     res.status(201).json({
         status: "success",
