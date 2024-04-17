@@ -24,7 +24,7 @@ exports.getSongById = async (req: any, res: any) => {
 
 // exports.getAlbumsByArtistId = async (req: any, res: any) => {
 //     const { artistId } = req.params;
-    
+
 //     const albumIds = await AlbumArtistModel.find({ artistId }).select('albumId').exec();
 //     const ids = albumIds.map((val: any) => val.albumId );
 
@@ -44,7 +44,7 @@ exports.createSong = async (req: any, res: any) => {
     const { title, duration, year, author } = req.body;
 
     const result = await SongModel.create({ title, duration, year, author })
-    
+
     res.status(200).json({
         status: "success",
         data: result
@@ -56,7 +56,7 @@ exports.createSong = async (req: any, res: any) => {
 //     const { albumId } = req.body;
 
 //     const result = await AlbumArtistModel.create({ artistId, albumId })
-    
+
 //     res.status(200).json({
 //         status: "success",
 //         data: result
@@ -76,7 +76,7 @@ exports.deleteSong = async (req: any, res: any) => {
 
 exports.updateSong = async (req: any, res: any) => {
     const { id } = req.params;
-        const result = await SongModel.findOneAndUpdate({_id: id}, req.body, { new: true});
+    const result = await SongModel.findOneAndUpdate({ _id: id }, req.body, { new: true });
 
     res.status(201).json({
         status: "success",

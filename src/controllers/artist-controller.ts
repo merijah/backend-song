@@ -39,7 +39,6 @@ exports.getAlbumsByArtistId = async (req: any, res: any) => {
     
     const albumIds = await AlbumArtistModel.find({ artistId }).select('albumId').exec();
     const ids = albumIds.map((val: any) => val.albumId );
-
     const albums = await AlbumModel.find({
         _id: {
             $in: ids

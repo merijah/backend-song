@@ -3,18 +3,10 @@ import { albumSchema } from './album-schema';
 import { ISong } from '../entities/song-entity';
 
 const songSchema = new Schema<ISong>({
-    title: {
-        type: String,
-    },
-    duration: {
-        type: Number,
-    },
-    year: {
-        type: Number,
-    },
-    author: {
-        type: String,
-    },
-    },);
+    title: String,
+    duration: Number,
+    year: Number,
+    author: String
+},);
 
 export const SongModel = mongoose.model('songs', songSchema); 
