@@ -18,5 +18,6 @@ AlbumRouter
     .route(`/:albumId/songs`)
     .get(albumController.getAllSongsByAlbumId)
     .post(albumController.assignSong)
+    .delete(artistController.removeSong)
 
 module.exports = AlbumRouter;

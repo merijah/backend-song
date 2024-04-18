@@ -111,6 +111,21 @@ exports.deleteArtist = async (req: any, res: any) => {
     })
 }
 
+exports.removeAlbum = async (req: any, res: any) => {
+    const { artistId } = req.params;
+    const { albumId } = req.body;
+
+    const result = await AlbumArtistModel.deleteOne({
+        artistId,
+        albumId
+    });
+
+    res.status(201).json({
+        status: "success",
+        data: null
+    })
+}
+
 exports.updateArtist = async (req: any, res: any) => {
     const { id } = req.params;
 

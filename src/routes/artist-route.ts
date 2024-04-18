@@ -18,6 +18,7 @@ ArtistRouter
     .route('/:artistId/albums')
     .get(artistController.getAlbumsByArtistId)
     .post(artistController.assignAlbum)
+    .delete(artistController.removeAlbum)
 
 ArtistRouter
     .route('/:artistId/songs')

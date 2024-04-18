@@ -61,6 +61,21 @@ exports.assignSong = async (req: any, res: any) => {
     })
 }
 
+exports.removeSong = async (req: any, res: any) => {
+    const { albumId } = req.params;
+    const { songId } = req.body;
+
+    const result = await AlbumSongModel.deleteOne({
+        songId,
+        albumId
+    });
+
+    res.status(201).json({
+        status: "success",
+        data: null
+    })
+}
+
 exports.deleteAlbum = async (req: any, res: any) => {
     const { id } = req.params;
 
