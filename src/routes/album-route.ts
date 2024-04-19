@@ -4,7 +4,7 @@ const albumController = require('../controllers/album-controller');
 const AlbumRouter = express.Router();
 
 AlbumRouter
-    .route(`/`)
+    .route(`/`) 
     .get(albumController.getAllAlbums)
     .post(albumController.createAlbum)
 
@@ -18,6 +18,6 @@ AlbumRouter
     .route(`/:albumId/songs`)
     .get(albumController.getAllSongsByAlbumId)
     .post(albumController.assignSong)
-    .delete(artistController.removeSong)
+    .delete(albumController.removeSong)
 
 module.exports = AlbumRouter;

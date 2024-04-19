@@ -23,8 +23,8 @@ app.use(`${EndPoints.ARTISTS}`, artistRouter);
 app.use(`${EndPoints.ALBUMS}`, albumRouter);
 app.use(`${EndPoints.SONGS}`, songRouter);
 
-app.all("*", (req: Request, res: Response, next: NextFunction) => {
-    next(new Error(`route ${req.url} not found ${404}`)); 
+app.all("*", (req: Request, res: any) => {
+    res.status(404).json({ message: `route ${req.url} not found ${404}`}); 
 });
 
 module.exports = app;

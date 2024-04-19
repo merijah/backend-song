@@ -7,8 +7,8 @@ if(!PASSWORD) {
     console.log('Environment variable PASSWORD must be defined');
     process.exit();
 }
-// const DB = process.env.DATABASE_URL;
-const DB = process.env.MONGODB_ATLAS_DATABASE_URL?.replace('<PASSWORD>', process.env.PASSWORD!);
+const DB = "mongodb://127.0.0.1:27017/songs";
+// const DB = process.env.MONGODB_ATLAS_DATABASE_URL?.replace('<meri4525>', PASSWORD);
 
 mongoose.connect(DB).then((con: any) => {
     console.log('db connection successful!')
@@ -20,12 +20,9 @@ const server = app.listen(PORT, () => {
     console.log(`App running on port ${PORT}`);
 });
 
-process.on('unhandledRejection', err => {
-    server.close(() => process.exit(1));
-});
 
-process.on('uncaughtException', err => {
-    server.close(() => process.exit(1));
-});
+const { MongoClient } = require('mongodb');
 
-module.exports = mongoose;
+// Connection URI
+const uri = 'mongodb://localhost:27017';
+
